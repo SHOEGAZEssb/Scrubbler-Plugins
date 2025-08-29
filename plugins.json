@@ -8,7 +8,7 @@
     "SupportedPlatforms": [
       "All"
     ],
-    "SourceUri": "https://raw.githubusercontent.com/SHOEGAZEssb/Scrubbler-Plugins/main/Scrubbler.Plugin.Accounts.LastFm.dll"
+    "SourceUri": "https://raw.githubusercontent.com/SHOEGAZEssb/Scrubbler-Plugins/main/plugins/Scrubbler.Plugin.Accounts.LastFm.zip"
   },
   {
     "Id": "scrubbler.plugin.manualscrobbler.manualscrobbleplugin",
@@ -19,6 +19,6 @@
     "SupportedPlatforms": [
       "All"
     ],
-    "SourceUri": "https://raw.githubusercontent.com/SHOEGAZEssb/Scrubbler-Plugins/main/Scrubbler.Plugin.ManualScrobbler.dll"
+    "SourceUri": "https://raw.githubusercontent.com/SHOEGAZEssb/Scrubbler-Plugins/main/plugins/Scrubbler.Plugin.ManualScrobbler.zip"
   }
 ]
