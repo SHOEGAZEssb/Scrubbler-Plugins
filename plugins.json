@@ -1,0 +1,24 @@
+[
+  {
+    "Id": "scrubbler.plugin.accounts.lastfm.lastfmaccountplugin",
+    "Name": "Last.fm",
+    "Version": "1.0.0\u002Be8644f8e46ec11e1ebc70f62bab6c33922f3ab42",
+    "Description": "Scrobble to a last.fm account",
+    "PluginType": "Account Plugin",
+    "SupportedPlatforms": [
+      "All"
+    ],
+    "SourceUri": "https://raw.githubusercontent.com/SHOEGAZEssb/Scrubbler-Plugins/main/Scrubbler.Plugin.Accounts.LastFm.dll"
+  },
+  {
+    "Id": "scrubbler.plugin.manualscrobbler.manualscrobbleplugin",
+    "Name": "Manual Scrobbler",
+    "Version": "1.0.0\u002Be8644f8e46ec11e1ebc70f62bab6c33922f3ab42",
+    "Description": "Enter track details manually and scrobble it",
+    "PluginType": "Scrobble Plugin",
+    "SupportedPlatforms": [
+      "All"
+    ],
+    "SourceUri": "https://raw.githubusercontent.com/SHOEGAZEssb/Scrubbler-Plugins/main/Scrubbler.Plugin.ManualScrobbler.dll"
+  }
+]
