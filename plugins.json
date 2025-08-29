@@ -2,7 +2,7 @@
   {
     "Id": "scrubbler.plugin.accounts.lastfm.lastfmaccountplugin",
     "Name": "Last.fm",
-    "Version": "1.0.0\u002Be2bebc1edef2fbee0979bee487edeba4aca1081a",
+    "Version": "1.0.0",
     "Description": "Scrobble to a last.fm account",
     "PluginType": "Account Plugin",
     "SupportedPlatforms": [
@@ -13,7 +13,7 @@
   {
     "Id": "scrubbler.plugin.manualscrobbler.manualscrobbleplugin",
     "Name": "Manual Scrobbler",
-    "Version": "1.0.0\u002Be2bebc1edef2fbee0979bee487edeba4aca1081a",
+    "Version": "1.0.0",
     "Description": "Enter track details manually and scrobble it",
     "PluginType": "Scrobble Plugin",
     "SupportedPlatforms": [
