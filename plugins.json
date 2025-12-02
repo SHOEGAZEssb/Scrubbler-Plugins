@@ -11,6 +11,17 @@
     "SourceUri": "https://raw.githubusercontent.com/SHOEGAZEssb/Scrubbler-Plugins/main/plugins/Scrubbler.Plugin.Accounts.LastFm.zip"
   },
   {
+    "Id": "scrubbler.plugin.scrobbler.applemusicscrobbler.applemusicscrobbleplugin",
+    "Name": "Apple Music Scrobbler",
+    "Version": "1.0.0",
+    "Description": "Scrobble tracks from another last.fm user",
+    "PluginType": "Plugin",
+    "SupportedPlatforms": [
+      "Windows"
+    ],
+    "SourceUri": "https://raw.githubusercontent.com/SHOEGAZEssb/Scrubbler-Plugins/main/plugins/Scrubbler.Plugin.Scrobbler.AppleMusicScrobbler.zip"
+  },
+  {
     "Id": "scrubbler.plugin.scrobblers.friendscrobbler.friendscrobbleplugin",
     "Name": "Friend Scrobbler",
     "Version": "1.0.0",
