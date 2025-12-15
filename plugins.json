@@ -24,6 +24,18 @@
     "SourceUri": "https://raw.githubusercontent.com/SHOEGAZEssb/Scrubbler-Plugins/main/plugins/Scrubbler.Plugin.Scrobbler.AppleMusicScrobbler.zip"
   },
   {
+    "Id": "scrubbler.plugin.scrobblers.databasescrobbler.databasescrobbleplugin",
+    "Name": "Database Scrobbler",
+    "Version": "1.0.0",
+    "Description": "Search and scrobble from various online music databases",
+    "IconUri": "https://raw.githubusercontent.com/SHOEGAZEssb/Scrubbler-Plugins/main/plugins/Scrubbler.Plugin.Scrobblers.DatabaseScrobbler.png",
+    "PluginType": "Scrobble Plugin",
+    "SupportedPlatforms": [
+      "All"
+    ],
+    "SourceUri": "https://raw.githubusercontent.com/SHOEGAZEssb/Scrubbler-Plugins/main/plugins/Scrubbler.Plugin.Scrobblers.DatabaseScrobbler.zip"
+  },
+  {
     "Id": "scrubbler.plugin.scrobblers.friendscrobbler.friendscrobbleplugin",
     "Name": "Friend Scrobbler",
     "Version": "1.0.0",
