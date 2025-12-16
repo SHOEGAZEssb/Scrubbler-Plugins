@@ -24,6 +24,18 @@
     "SourceUri": "https://raw.githubusercontent.com/SHOEGAZEssb/Scrubbler-Plugins/main/plugins/Scrubbler.Plugin.Scrobbler.AppleMusicScrobbler.zip"
   },
   {
+    "Id": "scrubbler.plugin.scrobbler.mock.mockscrobbleplugin",
+    "Name": "Test Plugin",
+    "Version": "1.0.0",
+    "Description": "Just for testing purposes",
+    "IconUri": "https://raw.githubusercontent.com/SHOEGAZEssb/Scrubbler-Plugins/main/plugins/Scrubbler.Plugin.Scrobbler.Mock.png",
+    "PluginType": "Plugin",
+    "SupportedPlatforms": [
+      "All"
+    ],
+    "SourceUri": "https://raw.githubusercontent.com/SHOEGAZEssb/Scrubbler-Plugins/main/plugins/Scrubbler.Plugin.Scrobbler.Mock.zip"
+  },
+  {
     "Id": "scrubbler.plugin.scrobblers.databasescrobbler.databasescrobbleplugin",
     "Name": "Database Scrobbler",
     "Version": "1.0.0",
