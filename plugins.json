@@ -24,6 +24,18 @@
     "SourceUri": "https://raw.githubusercontent.com/SHOEGAZEssb/Scrubbler-Plugins/main/plugins/Scrubbler.Plugin.Scrobbler.AppleMusicScrobbler.zip"
   },
   {
+    "Id": "scrubbler.plugin.scrobbler.fileparsescrobbler.fileparsescrobbleplugin",
+    "Name": "File Parse Scrobbler",
+    "Version": "1.0.0.0",
+    "Description": "Parses scrobbles from local files",
+    "IconUri": "https://raw.githubusercontent.com/SHOEGAZEssb/Scrubbler-Plugins/main/plugins/Scrubbler.Plugin.Scrobbler.FileParseScrobbler.png",
+    "PluginType": "Scrobble Plugin",
+    "SupportedPlatforms": [
+      "All"
+    ],
+    "SourceUri": "https://raw.githubusercontent.com/SHOEGAZEssb/Scrubbler-Plugins/main/plugins/Scrubbler.Plugin.Scrobbler.FileParseScrobbler.zip"
+  },
+  {
     "Id": "scrubbler.plugin.scrobbler.mock.mockscrobbleplugin",
     "Name": "Test Plugin",
     "Version": "2.0.0.0",
