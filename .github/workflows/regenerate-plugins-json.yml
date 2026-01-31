@@ -5,7 +5,7 @@ on:
     paths:
       - "plugins/*.zip"
       - "plugins/*.png"
-      - "PluginMetaDataGenerator/**"
+      - "PluginMetadataGenerator/**"
       - ".github/workflows/regenerate-plugins-json.yml"
       
   workflow_dispatch:
