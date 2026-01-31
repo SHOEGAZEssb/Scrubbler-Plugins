@@ -92,6 +92,12 @@ class Program
                 var pluginTypes = asm.GetTypes()
                     .Where(t => typeof(IPlugin).IsAssignableFrom(t) && !t.IsAbstract);
 
+                if (!pluginTypes.Any())
+                {
+                    Console.WriteLine($"Skipping {zipFile}: no IPlugin implementations found in {Path.GetFileName(dll)}");
+                    continue;
+                }
+
                 foreach (var type in pluginTypes)
                 {
                     var id = type.FullName?.ToLowerInvariant() ?? Path.GetFileNameWithoutExtension(dll).ToLowerInvariant();
