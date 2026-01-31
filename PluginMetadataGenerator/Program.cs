@@ -75,12 +75,16 @@ class Program
                 ZipFile.ExtractToDirectory(zipFile, tempDir);
 
                 // find the main plugin DLL inside the zip
-                var dll = Directory.GetFiles(tempDir, "Scrubbler.Plugin.*.dll").FirstOrDefault();
+                var dll = Directory.GetFiles(tempDir, "Scrubbler.Plugin.*.dll", SearchOption.AllDirectories)
+                                   .FirstOrDefault();
+
                 if (dll == null)
                 {
                     Console.WriteLine($"Skipping {zipFile}: no Scrubbler.Plugin.*.dll found inside");
                     continue;
                 }
+
+                Console.WriteLine($"Inspecting {Path.GetFileName(zipFile)} using {Path.GetFileName(dll)}");
 
                 var asm = Assembly.LoadFrom(dll);
 
