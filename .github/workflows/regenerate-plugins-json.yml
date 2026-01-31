@@ -1,0 +1,66 @@
+name: Regenerate plugins.json
+
+on:
+  push:
+    paths:
+      - "plugins/*.zip"
+      - "plugins/*.png"
+      - "PluginMetaDataGenerator/**"
+      - ".github/workflows/regenerate-plugins-json.yml"
+      
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: regenerate-plugins-json
+  cancel-in-progress: false
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Scrubbler-Plugins
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Regenerate plugins.json
+        shell: bash
+        run: |
+          set -euxo pipefail
+
+          zipDir="plugins"
+          outputJson="plugins.json"
+
+          baseUrl="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${GITHUB_REF_NAME}"
+
+          dotnet run --project PluginMetaDataGenerator/PluginMetaDataGenerator.csproj \
+            -- "$zipDir" "$outputJson" "$baseUrl"
+
+          ls -la "$outputJson"
+
+      - name: Commit plugins.json if changed
+        shell: bash
+        run: |
+          set -euxo pipefail
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add plugins.json
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          git commit -m "Regenerate plugins.json"
+          git push
