@@ -42,7 +42,7 @@ jobs:
 
           baseUrl="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${GITHUB_REF_NAME}"
 
-          dotnet run --project PluginMetaDataGenerator/PluginMetaDataGenerator.csproj \
+          dotnet run --project PluginMetadataGenerator/PluginMetadataGenerator.csproj \
             -- "$zipDir" "$outputJson" "$baseUrl"
 
           ls -la "$outputJson"
