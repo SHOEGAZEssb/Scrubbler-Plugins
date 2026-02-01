@@ -149,7 +149,7 @@ jobs:
 
           (cd "$buildDir" && zip -r "${GITHUB_WORKSPACE}/out/${zipName}" .)
 
-          cp "${{ inputs.icon_path }}" "out/${iconName}"
+          cp "${pluginName}/icon.png" "out/${iconName}"
 
           ls -la out
 
