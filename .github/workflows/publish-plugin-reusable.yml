@@ -62,7 +62,7 @@ jobs:
           PLUGIN_DEFAULTS_INJECT: ${{ secrets.PLUGIN_DEFAULTS_INJECT }}
           FAIL_ON_UNREPLACED: ${{ inputs.fail_on_unreplaced }}
         run: |
-          set -euxo pipefail
+          set -euo pipefail
 
           if [[ -z "${PLUGIN_DEFAULTS_INJECT}" ]]; then
             echo "inject_defaults is true but secret PLUGIN_DEFAULTS_INJECT is empty."
