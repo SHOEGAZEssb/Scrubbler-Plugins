@@ -1,5 +1,17 @@
 [
   {
+    "Id": "scrubbler.plugin.accounts.lastfm.lastfmaccountplugin",
+    "Name": "Last.fm",
+    "Version": "1.0.0.0",
+    "Description": "Scrobble to a Last.fm account",
+    "IconUri": "https://raw.githubusercontent.com/SHOEGAZEssb/Scrubbler-Plugins/main/plugins/Scrubbler.Plugin.Accounts.LastFm.png",
+    "PluginType": "Account Plugin",
+    "SupportedPlatforms": [
+      "All"
+    ],
+    "SourceUri": "https://raw.githubusercontent.com/SHOEGAZEssb/Scrubbler-Plugins/main/plugins/Scrubbler.Plugin.Accounts.LastFm.zip"
+  },
+  {
     "Id": "scrubbler.plugin.scrobblers.manualscrobbler.manualscrobbleplugin",
     "Name": "Manual Scrobbler",
     "Version": "1.0.0.0",
