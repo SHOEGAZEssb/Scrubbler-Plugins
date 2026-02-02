@@ -16,7 +16,7 @@ on:
       plugins_repo:
         type: string
         required: false
-        default: "SHOEGAZEssb/Scrubbler-Plugins"
+        default: "Scrubbler-Dev/Scrubbler-Plugins"
       plugins_repo_path:
         type: string
         required: false
