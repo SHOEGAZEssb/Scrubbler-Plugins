@@ -180,7 +180,7 @@ jobs:
           cp -f "out/${pluginName}.zip" "$targetDir/${pluginName}.zip"
           
           iconName="out/${pluginName}.png"
-          if [[ -f "$iconSrc" ]]; then
+          if [[ -f "$iconName" ]]; then
             cp -f "${iconName}" "$targetDir/${pluginName}.png"
           else
             echo "No icon found for ${pluginName}, skipping."
