@@ -149,7 +149,14 @@ jobs:
 
           (cd "$buildDir" && zip -r "${GITHUB_WORKSPACE}/out/${zipName}" .)
 
-          cp "${pluginName}/icon.png" "out/${iconName}"
+          iconSrc="${pluginName}/icon.png"
+          iconDst="out/${iconName}"
+
+          if [[ -f "$iconSrc" ]]; then
+            cp "$iconSrc" "$iconDst"
+          else
+            echo "No icon found for ${pluginName}, skipping."
+          fi
 
           ls -la out
 
