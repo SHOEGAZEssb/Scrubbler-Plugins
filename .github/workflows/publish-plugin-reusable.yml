@@ -178,7 +178,13 @@ jobs:
           pluginName="${{ inputs.plugin_name }}"
 
           cp -f "out/${pluginName}.zip" "$targetDir/${pluginName}.zip"
-          cp -f "out/${pluginName}.png" "$targetDir/${pluginName}.png"
+          
+          iconName="out/${pluginName}.png"
+          if [[ -f "$iconSrc" ]]; then
+            cp -f "${iconName}" "$targetDir/${pluginName}.png"
+          else
+            echo "No icon found for ${pluginName}, skipping."
+          fi          
 
           ls -la "$targetDir"
 
