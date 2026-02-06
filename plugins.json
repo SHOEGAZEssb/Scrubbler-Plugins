@@ -1,5 +1,17 @@
 [
   {
+    "Id": "scrubbler.plugin.scrobblers.databasescrobbler.databasescrobbleplugin",
+    "Name": "Database Scrobbler",
+    "Version": "1.0.0.0",
+    "Description": "Search and scrobble from various online music databases",
+    "IconUri": "https://raw.githubusercontent.com/Scrubbler-Dev/Scrubbler-Plugins/main/plugins/Scrubbler.Plugin.Scrobblers.DatabaseScrobbler.png",
+    "PluginType": "Scrobble Plugin",
+    "SupportedPlatforms": [
+      "All"
+    ],
+    "SourceUri": "https://raw.githubusercontent.com/Scrubbler-Dev/Scrubbler-Plugins/main/plugins/Scrubbler.Plugin.Scrobblers.DatabaseScrobbler.zip"
+  },
+  {
     "Id": "scrubbler.plugin.accounts.lastfm.lastfmaccountplugin",
     "Name": "Last.fm",
     "Version": "1.0.0.0",
