@@ -134,7 +134,8 @@ jobs:
       - name: Test
         run: dotnet test -c Release --no-build --verbosity normal
 
-      - name: Create plugin zip and stage icon
+      - name: Create plugin zip and stage icon (Linux/macOS)
+        if: runner.os != 'Windows'
         shell: bash
         run: |
           set -euxo pipefail
@@ -163,6 +164,38 @@ jobs:
           fi
 
           ls -la out
+          
+      - name: Create plugin zip and stage icon (Windows)
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          Remove-Item -Recurse -Force out -ErrorAction SilentlyContinue
+          New-Item -ItemType Directory -Path out | Out-Null
+
+          $pluginName = "${{ inputs.plugin_name }}"
+          $tfm = "${{ inputs.tfm }}"
+          $buildDir = Join-Path $pluginName "bin/Release/$tfm"
+
+          if (-not (Test-Path $buildDir)) {
+            throw "Build directory not found: $buildDir"
+          }
+
+          $zipPath = Join-Path (Resolve-Path out) "$pluginName.zip"
+
+          if (Test-Path $zipPath) { Remove-Item $zipPath -Force }
+
+          Compress-Archive -Path (Join-Path $buildDir '*') -DestinationPath $zipPath -Force
+
+          $iconSrc = Join-Path $pluginName "icon.png"
+          $iconDst = Join-Path out "$pluginName.png"
+
+          if (Test-Path $iconSrc) {
+            Copy-Item $iconSrc $iconDst -Force
+          } else {
+            Write-Host "No icon found for $pluginName, skipping."
+          }
+
+          Get-ChildItem out | Format-Table -AutoSize
 
       - name: Checkout Scrubbler-Plugins repo
         uses: actions/checkout@v4
