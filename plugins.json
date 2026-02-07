@@ -48,6 +48,18 @@
     "SourceUri": "https://raw.githubusercontent.com/Scrubbler-Dev/Scrubbler-Plugins/main/plugins/Scrubbler.Plugin.Scrobblers.FileParseScrobbler.zip"
   },
   {
+    "Id": "scrubbler.plugin.scrobbler.applemusicscrobbler.applemusicscrobbleplugin",
+    "Name": "Apple Music Scrobbler",
+    "Version": "1.0.0.0",
+    "Description": "Automatically scrobble tracks playing in the Apple Music desktop app",
+    "IconUri": "https://raw.githubusercontent.com/Scrubbler-Dev/Scrubbler-Plugins/main/plugins/Scrubbler.Plugin.Scrobblers.AppleMusicScrobbler.png",
+    "PluginType": "Scrobble Plugin",
+    "SupportedPlatforms": [
+      "Windows"
+    ],
+    "SourceUri": "https://raw.githubusercontent.com/Scrubbler-Dev/Scrubbler-Plugins/main/plugins/Scrubbler.Plugin.Scrobblers.AppleMusicScrobbler.zip"
+  },
+  {
     "Id": "scrubbler.plugin.scrobblers.manualscrobbler.manualscrobbleplugin",
     "Name": "Manual Scrobbler",
     "Version": "1.0.0.0",
