@@ -33,6 +33,10 @@ on:
         type: boolean
         required: false
         default: true
+      runner:
+        type: string
+        required: false
+        default: ubuntu-latest
     secrets:
       SCRUBBLER_PLUGINS_PAT:
         required: true
@@ -48,7 +52,7 @@ concurrency:
 
 jobs:
   publish:
-    runs-on: ubuntu-latest
+    runs-on: ${{ inputs.runner }}
 
     steps:
       - name: Checkout plugin repo
