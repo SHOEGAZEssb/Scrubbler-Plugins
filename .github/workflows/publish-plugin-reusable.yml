@@ -57,6 +57,9 @@ jobs:
     steps:
       - name: Checkout plugin repo
         uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
 
       - name: Inject API keys into PluginDefaults.cs
         if: inputs.inject_defaults
